@@ -1,0 +1,24 @@
+Package: UniScreen
+Type: Package
+Title: R Code used for Edelmann et al.
+Version: 0.1.0
+Authors@R: c(person(given = "Dominic", family = "Edelmann", email = "d.edelmann@dkfz.de", role="aut"),
+             person(given = "Manuela", family = "Hummel", email = "m.hummel@dkfz.de", role="aut"),
+             person(given = "Thomas", family = "Hielscher", email = "t.hielscher@dkfz.de", role=c("cre", "aut")),
+             person(given = "Axel", family = "Benner", email = "a.benner@dkfz.de", role="aut"))
+Description: Contains R Code necessary to reproduce results in Edelmann et al., including screening functions, performance measures and plotting functions. 
+Imports:
+    survival,
+    Rcpp,
+    Rfast,
+    mfp,
+    ahaz,
+    glmnet,
+    Ball,
+    corrplot,
+    survPresmooth
+LinkingTo: Rcpp
+License: GPL-2|GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
