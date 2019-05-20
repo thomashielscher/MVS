@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // normalize_matrix
 NumericMatrix normalize_matrix(NumericMatrix& M, NumericVector& cmM, double& mM);
-RcppExport SEXP _UniScreen_normalize_matrix(SEXP MSEXP, SEXP cmMSEXP, SEXP mMSEXP) {
+RcppExport SEXP _MVS_normalize_matrix(SEXP MSEXP, SEXP cmMSEXP, SEXP mMSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // hadamard_product
 NumericMatrix hadamard_product(NumericMatrix& X, NumericMatrix& Y);
-RcppExport SEXP _UniScreen_hadamard_product(SEXP XSEXP, SEXP YSEXP) {
+RcppExport SEXP _MVS_hadamard_product(SEXP XSEXP, SEXP YSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -32,7 +32,7 @@ END_RCPP
 }
 // vector_product
 NumericVector vector_product(NumericVector& X, NumericVector& Y);
-RcppExport SEXP _UniScreen_vector_product(SEXP XSEXP, SEXP YSEXP) {
+RcppExport SEXP _MVS_vector_product(SEXP XSEXP, SEXP YSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -44,7 +44,7 @@ END_RCPP
 }
 // matrix_prod_sum
 double matrix_prod_sum(NumericMatrix& X, NumericMatrix& Y);
-RcppExport SEXP _UniScreen_matrix_prod_sum(SEXP XSEXP, SEXP YSEXP) {
+RcppExport SEXP _MVS_matrix_prod_sum(SEXP XSEXP, SEXP YSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -56,7 +56,7 @@ END_RCPP
 }
 // vector_prod_sum
 double vector_prod_sum(NumericVector& X, NumericVector& Y);
-RcppExport SEXP _UniScreen_vector_prod_sum(SEXP XSEXP, SEXP YSEXP) {
+RcppExport SEXP _MVS_vector_prod_sum(SEXP XSEXP, SEXP YSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -68,7 +68,7 @@ END_RCPP
 }
 // specific_vector_prod_sum
 double specific_vector_prod_sum(NumericVector& X, NumericVector& Y, NumericVector& gamma_1, NumericVector& gamma_X, NumericVector& gamma_Y, NumericVector& gamma_XY);
-RcppExport SEXP _UniScreen_specific_vector_prod_sum(SEXP XSEXP, SEXP YSEXP, SEXP gamma_1SEXP, SEXP gamma_XSEXP, SEXP gamma_YSEXP, SEXP gamma_XYSEXP) {
+RcppExport SEXP _MVS_specific_vector_prod_sum(SEXP XSEXP, SEXP YSEXP, SEXP gamma_1SEXP, SEXP gamma_XSEXP, SEXP gamma_YSEXP, SEXP gamma_XYSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -84,7 +84,7 @@ END_RCPP
 }
 // matrix_sum
 double matrix_sum(NumericMatrix& X);
-RcppExport SEXP _UniScreen_matrix_sum(SEXP XSEXP) {
+RcppExport SEXP _MVS_matrix_sum(SEXP XSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -95,7 +95,7 @@ END_RCPP
 }
 // vector_prod_sum_sample
 double vector_prod_sum_sample(const NumericVector X, const NumericVector Y, const IntegerVector s);
-RcppExport SEXP _UniScreen_vector_prod_sum_sample(SEXP XSEXP, SEXP YSEXP, SEXP sSEXP) {
+RcppExport SEXP _MVS_vector_prod_sum_sample(SEXP XSEXP, SEXP YSEXP, SEXP sSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -108,18 +108,18 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_UniScreen_normalize_matrix", (DL_FUNC) &_UniScreen_normalize_matrix, 3},
-    {"_UniScreen_hadamard_product", (DL_FUNC) &_UniScreen_hadamard_product, 2},
-    {"_UniScreen_vector_product", (DL_FUNC) &_UniScreen_vector_product, 2},
-    {"_UniScreen_matrix_prod_sum", (DL_FUNC) &_UniScreen_matrix_prod_sum, 2},
-    {"_UniScreen_vector_prod_sum", (DL_FUNC) &_UniScreen_vector_prod_sum, 2},
-    {"_UniScreen_specific_vector_prod_sum", (DL_FUNC) &_UniScreen_specific_vector_prod_sum, 6},
-    {"_UniScreen_matrix_sum", (DL_FUNC) &_UniScreen_matrix_sum, 1},
-    {"_UniScreen_vector_prod_sum_sample", (DL_FUNC) &_UniScreen_vector_prod_sum_sample, 3},
+    {"_MVS_normalize_matrix", (DL_FUNC) &_MVS_normalize_matrix, 3},
+    {"_MVS_hadamard_product", (DL_FUNC) &_MVS_hadamard_product, 2},
+    {"_MVS_vector_product", (DL_FUNC) &_MVS_vector_product, 2},
+    {"_MVS_matrix_prod_sum", (DL_FUNC) &_MVS_matrix_prod_sum, 2},
+    {"_MVS_vector_prod_sum", (DL_FUNC) &_MVS_vector_prod_sum, 2},
+    {"_MVS_specific_vector_prod_sum", (DL_FUNC) &_MVS_specific_vector_prod_sum, 6},
+    {"_MVS_matrix_sum", (DL_FUNC) &_MVS_matrix_sum, 1},
+    {"_MVS_vector_prod_sum_sample", (DL_FUNC) &_MVS_vector_prod_sum_sample, 3},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_UniScreen(DllInfo *dll) {
+RcppExport void R_init_MVS(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
